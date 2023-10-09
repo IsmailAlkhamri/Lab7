@@ -1,0 +1,108 @@
+body{
+    background-color:azure;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: bottom center;
+    background-attachment:scroll;
+    /* background: azure url(../images/slide01.jpg) no-repeat bottom center fixed */
+
+}
+h1{
+    color: rgb(255,0,0);
+    text-align: center;
+
+}
+.rotate{
+    width: 200px;
+    height: 120px;
+    padding-top: 80px;
+    color: white;
+    font-size: 30px;
+    background-color:rgb(73, 71, 74);
+    outline-width: 10px;
+    outline-color:rgb(42, 96, 146);
+    outline-style: solid;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    transition:3s;
+    transition-delay: 0.2s;
+
+
+}
+.rotate:hover{
+    transform:rotate(1080deg);
+}
+.translate{
+    width: 200px;
+    height: 120px;
+    padding-top: 80px;
+    color: white;
+    font-size: 30px;
+    background-color:rgb(183, 155, 65);
+    border: 5px rgb(26, 64, 101) solid;
+    text-align: center;
+    position: absolute;
+    left: 8%;
+    top: 20%;
+    transition:5s;
+    transition-delay: 0s;
+
+}
+.translate:hover{
+       transform:translate(510px,300px) rotate(360deg);
+}
+.scale-skew{
+    width: 200px;
+    height: 120px;
+    padding-top: 80px;
+    color: white;
+    font-size: 30px;
+    background-color:rgb(67, 10, 10);
+    border: 5px rgb(127, 66, 135) solid;
+    text-align: center;
+    position: absolute;
+    left: 8%;
+    top: 60%;
+    transition:1.5s;
+    transition-delay: 0s;
+    
+}
+.scale-skew::before{
+    content: "Hello there Second Line Last Line";
+    color:#333;
+    width: 70%;
+    height: 80px;
+    font-size: 25px;
+    background-color: white;
+    position: absolute;
+    top: 60%;
+    left: 15%;
+
+    display: none;
+}
+.scale-skew:hover::before{
+    
+    display: block;   
+}
+.scale-skew:hover{
+    transform: scaleY(1.5) skewY(-10deg);
+}
+.total{
+    position: absolute;
+    font-size: 32.7px;
+    color:rgba(6, 49, 101, 0.637);
+    text-align: center;
+    left: 45.5%;
+    font-weight: bold;
+    top: 90%;
+    transition:3s 1s;
+    cursor:context-menu;
+}
+.total:hover{
+    
+    transform: translateY(-686.5px);
+    color:rgb(109, 108, 108);
+}
